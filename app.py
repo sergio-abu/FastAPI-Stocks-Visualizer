@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-APIKEY = '5YY9RV8SODFP8FEA'
+APIKEY = 'demo'
 
 
 @app.get("/")
