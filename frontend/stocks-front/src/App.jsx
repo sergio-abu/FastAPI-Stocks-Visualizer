@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Mainpage from './components/Mainpage';
+import './index.css'
 
 function App() {
   const [main, setData] = useState(null);
@@ -25,19 +26,24 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
+    <div className="bg-gray-200 p-6 flex flex-col items-center">
+      <form onSubmit={handleSubmit} className="mb-6 w-full md:w-2/3 lg:w-1/2 flex">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          className="border border-gray-400 p-2 rounded-lg w-full"
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-red-600 text-white p-2 rounded-lg ml-2">Submit</button>
       </form>
-      <h1>Ticker: {ticker.toUpperCase()}</h1>
+      <h1 className="text-2xl font-medium">Ticker: {ticker.toUpperCase()}</h1>
       {main && <Mainpage jsonData={main} />}
     </div>
   );
+
+
+
 }
+
 
 export default App;

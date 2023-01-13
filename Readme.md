@@ -9,6 +9,7 @@ uvicorn app:app --reload
 
 frontend:
 
-npm run dev
+npm install
 
+npm run dev
 

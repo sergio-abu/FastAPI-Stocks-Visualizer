@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import requests
-import database
 
 
 app = FastAPI()
@@ -16,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-APIKEY = 'demo'
+APIKEY = '5YY9RV8SODFP8FEA'
 
 
 @app.get("/")
@@ -29,11 +28,6 @@ def base_data(ticker: str):
     ticker = ticker.upper()
 
     main = requests.get(f'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol={ticker}&apikey={APIKEY}&outputsize=full').json()
-
-
-
-    database.insert_data(main)
-
 
     return main
 
