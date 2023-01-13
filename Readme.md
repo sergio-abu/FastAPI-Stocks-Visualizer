@@ -12,7 +12,7 @@ git clone https://github.com/sergio-abu/FastAPI-Stocks-Visualizer
 ```
 
 
-Cd to the repo:
+CD to the repo:
 ```
 cd FastAPI-Stocks-Visualizer
 ```
@@ -36,7 +36,7 @@ uvicorn app:app --reload
 ```
 
 
-Cd to the frontend:
+CD to the frontend:
 ```
 cd frontend/stocks-front
 ```
